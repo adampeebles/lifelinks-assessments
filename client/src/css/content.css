@@ -1,0 +1,174 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+/* line 5, ../scss/content.scss */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* line 15, ../scss/content.scss */
+.navbar-nav > li > a:hover,
+.navbar-nav .open > a,
+.navbar-nav .open > a:hover,
+.navbar-nav .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* line 23, ../scss/content.scss */
+ul.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* line 29, ../scss/content.scss */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* line 37, ../scss/content.scss */
+.navbar-brand {
+  padding: 5px 0px 0px 0px;
+}
+/* line 39, ../scss/content.scss */
+.navbar-brand img {
+  width: 225px;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+/* line 45, ../scss/content.scss */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 49, ../scss/content.scss */
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* line 53, ../scss/content.scss */
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+/* line 62, ../scss/content.scss */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+/* line 67, ../scss/content.scss */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+/* line 72, ../scss/content.scss */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+/* line 76, ../scss/content.scss */
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 500px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+/* line 89, ../scss/content.scss */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 93, ../scss/content.scss */
+.marketing h2 {
+  font-weight: normal;
+}
+
+/* line 96, ../scss/content.scss */
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Featurettes
+------------------------- */
+/* line 105, ../scss/content.scss */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* line 110, ../scss/content.scss */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  /* line 122, ../scss/content.scss */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  /* line 125, ../scss/content.scss */
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* line 129, ../scss/content.scss */
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  /* line 135, ../scss/content.scss */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  /* line 140, ../scss/content.scss */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  /* line 146, ../scss/content.scss */
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 152, ../scss/content.scss */
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

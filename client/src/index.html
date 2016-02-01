@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-ng-app="assesmentsApp">
+<html lang="en" data-ng-app="assessmentsApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,42 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon-152.png">
+
+	<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/splash.css" />
+	<link rel="stylesheet" href="css/items.css" />
+	<link rel="stylesheet" href="css/assessment.css" />
 </head>
 <body>
-	
-	<div data-ng-view class="container"></div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
-	<!--<script src="/node_modules/angular-route/angular-route.js"></script>
-	<script src="/node_modules/angular-resource/angular-resource.js"></script>-->
-	<script src="app/app.js"></script>
-	<script src="app/assesmentCtrl.js"></script>
-	<script src="app/match.js"></script>
+
+	<header id="header" ng-include="'app/layouts/header.html'" ></header>
+
+
+    <div class="container" ng-view=""></div>
+
+    <footer id="footer" ng-include="'app/layouts/footer.html'" ></footer>
+
+    <script src="app/app.js"></script>
+    <script src="app/user/userCtrl.js"></script>
+
+    <script src="app/assessment/assessmentCtrl.js"></script>
+     <script src="app/layouts/headerCtrl.js"></script>
+
+     <script src="app/common/articlesService.js"></script>
+    <script src="app/assessment/questionsFactory.js"></script>
+
+    <script src="app/user/match.js"></script>
+    <script src="app/assessment/assessmentDir.js"></script>
+
+
 </body>
 </html>

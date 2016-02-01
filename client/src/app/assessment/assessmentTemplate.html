@@ -1,0 +1,32 @@
+    <div ng-show="!assessmentOver">
+        <h2 id="question"> {{ question }} </h2>
+        <div ng-show="!lastQuestion">
+            <ul id="options">
+                <li ng-repeat="option in options">
+                    <label>
+                        <input type="radio" name="answer" ng-value="{{ $index }} + 1" >
+                        {{ option }}
+                    </label>
+                </li>
+            </ul>
+       </div>
+       <div ng-show="lastQuestion">
+           <label>City </label>
+           <input type="text" ng-model="location.city" name="city"><br>
+           <label>State </label>
+           <input type="text" ng-model="location.state" name="state"><br>
+       </div>
+
+        <div ng-show="!isAnswered">
+            <span> {{ errorMessage }} </span>
+        </div>
+
+        <div>
+            <button ng-click="nextQuestion()">Next</button>
+        </div>
+
+
+    </div>
+
+
+

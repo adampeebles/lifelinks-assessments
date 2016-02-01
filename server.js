@@ -21,8 +21,25 @@ server.register(require('inert'), (err) => {
     if (err) {
         throw err;
     }
-    server.route(require('./lib/assesmentroutes'));
-    //server.route(require('./lib/articlesroutes'));
+    server.route({
+        method: 'GET',
+        path: '/{path*}',
+        handler: {
+            directory: {
+                path: './client/src',
+                listing: false,
+                index: true
+            }
+        },
+        config:{
+            state:{
+                parse: true,
+                failAction:'ignore'
+            },
+            auth:false
+        }
+    });
+    server.route(require('./lib/assessmentroutes'));
 });
 
 server.start(() => {

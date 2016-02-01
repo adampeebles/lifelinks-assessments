@@ -1,0 +1,17 @@
+
+<div data-ng-controller="AssessmentCtrl">
+	<div class="container">
+		<h3>Life Links Personal Assessment</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis a ante sit amet interdum. Cras congue mattis lacus, ornare euismod ante tempor in. Cras id dolor vitae lacus vehicula sodales. Curabitur vitae nunc aliquet, pulvinar leo et, convallis tellus. Mauris imperdiet laoreet arcu, in posuere ligula egestas nec.</p>
+		<assessment> </assessment>
+	</div>
+	<div ng-show="assessmentOver">
+		<h2>Thank you for completing your personalized assessment.</h2>
+		<p>Listed below are some helpful articles that we recommend based on your current situation:</p>
+		<li ng-repeat="article in articles">
+			<a ng-href="#/articles/{{ article.url }} "> {{ article.title }} </a>
+		</li>
+	</div>
+
+
+</div>
