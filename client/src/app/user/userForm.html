@@ -1,28 +1,42 @@
 
 <h3>Life Links Personal Assessment</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis a ante sit amet interdum. Cras congue mattis lacus, ornare euismod ante tempor in. Cras id dolor vitae lacus vehicula sodales. Curabitur vitae nunc aliquet, pulvinar leo et, convallis tellus. Mauris imperdiet laoreet arcu, in posuere ligula egestas nec.</p>
-<div class="row" data-ng-controller="UserCtrl">
-    <form name="user" className="form-horizontal">
-        <div class="form-group has-error">
-            <label>First Name</label>
-            <input type="text" placeholder="First Name" name="firstName" ng-model="userSignUp.firstName" required/>
-            <div role="alert">
+<div  data-ng-controller="UserCtrl as vm">
+    <form name="user" class="form-horizontal half" role="form">
+        <div class="controls-row row">
+            <div class="form-group has-success">
+
+                <label >First Name</label>
+
+                <input class="form-control" type="text" placeholder="First Name" name="firstName" ng-model="userSignUp.firstName" required/>
+
+                <div role="alert" class="form-group has-error">
 			      <span class="help-block" ng-show="user.firstName.$error.required">
 			        Required!</span>
+                </div>
+
             </div>
-        </div>
-        <div class="form-group has-error">
-            <label>Last Name</label>
-            <input type="text" placeholder="Last Name" name="lastName" ng-model="userSignUp.lastName" required/>
-            <div role="alert">
+            <div class="form-group has-success">
+
+                <label>Last Name</label>
+
+                     <input class="form-control" type="text" placeholder="Last Name" name="lastName" ng-model="vm.userSignUp.lastName" required/>
+
+                <div role="alert" class="form-group has-error">
 			      <span class="help-block" ng-show="user.lastName.$error.required">
 			        Required!</span>
+                </div>
+
             </div>
         </div>
-        <div class="form-group has-error">
+
+        <div class="form-group has-success">
+
             <label>Email Address</label>
-            <input type="email" placeholder="Email" name="email"  ng-model="userSignUp.email" required/>
-            <div role="alert">
+
+            <input class="form-control" type="email" placeholder="Email" name="email"  ng-model="vm.userSignUp.email" required/>
+
+            <div role="alert" class="form-group has-error">
 			      <span class="help-block" ng-show="user.email.$error.required">
 			        Required!</span>
 			      <span class="help-block" ng-show="user.email.$error.email">
@@ -30,17 +44,19 @@
             </div>
         </div>
 
-        <div class="form-group has-error">
+        <div class="form-group has-success">
             <label>Confirm Email</label>
-            <input type="email" placeholder="Confirm Email" name="emailConfirm" match="userSignUp.email" ng-model="emailConfirm.text" required/>
-            <div role="alert">
+
+            <input class="form-control" type="email" placeholder="Confirm Email" name="emailConfirm" match="vm.userSignUp.email" ng-model="emailConfirm.text" required/>
+
+            <div role="alert" class="form-group has-error">
 			      <span class="help-block" ng-show="user.emailConfirm.$error.required">
 			        Required!</span>
 			      <span class="help-block" ng-show="user.emailConfirm.$error.match">
 			       Email does not match!</span>
             </div>
         </div>
-        <button type="button" class="btn btn-primary btn-md" ng-click="signUp()" ng-disabled="
+        <button type="button" class="btn btn-primary btn-lg" ng-click="vm.signUp()" ng-disabled="
   			    user.firstName.$error.required ||
   			    user.lastName.$error.required ||
   			    user.email.$error.required ||
@@ -50,5 +66,7 @@
             Begin Assessment
         </button>
     </form>
+
+
 </div>
 

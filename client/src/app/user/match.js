@@ -1,35 +1,37 @@
 (function () {
-'use strict';
-var directiveId = 'match';
-app.directive(directiveId, ['$parse', function ($parse) {
- 
-var directive = {
- link: link,
- restrict: 'A',
- require: '?ngModel'
-};
-return directive;
- 
-function link(scope, elem, attrs, ctrl) {
- // if ngModel is not defined, we don't need to do anything
- if (!ctrl) return;
- if (!attrs[directiveId]) return;
- 
- var firstEmail = $parse(attrs[directiveId]);
- 
- var validator = function (value) {
-    var temp = firstEmail(scope),
-         v = value === temp;
-         ctrl.$setValidity('match', v);
-     return value;
-}
- 
- ctrl.$parsers.unshift(validator);
- ctrl.$formatters.push(validator);
- attrs.$observe(directiveId, function () {
- validator(ctrl.$viewValue);
-});
- 
-}
-}]);
+    'use strict';
+    var directiveName = 'match';
+    angular.module('assessmentsApp')
+         .directive(directiveName, ['$parse', match]);
+
+             function match($parse) {
+                 var directive = {
+                     link: link,
+                     restrict: 'A',
+                     require: '?ngModel'
+                 };
+                 return directive;
+
+                 function link(scope, elem, attrs, ctrl) {
+
+                     if (!ctrl) return;
+                     if (!attrs[directiveName]) return;
+
+                     var firstEmail = $parse(attrs[directiveName]);
+
+                     var validator = function (value) {
+                         var temp = firstEmail(scope),
+                             v = value === temp;
+                         ctrl.$setValidity(directiveName, v);
+                         return value;
+                     }
+
+                     ctrl.$parsers.unshift(validator);
+                     ctrl.$formatters.push(validator);
+                     attrs.$observe(directiveName, function () {
+                         validator(ctrl.$viewValue);
+                     });
+
+                 }
+             }
 })();

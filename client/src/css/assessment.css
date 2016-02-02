@@ -1,80 +1,187 @@
-/* line 1, ../scss/assessment.scss */
-.modal-header {
-  font-family: 'Allerta', Georgia, Times, serif;
-  font-size: 0.9em;
-  border-bottom: 0;
+a,
+a:focus,
+a:hover {
+    color: #5096D2;
 }
 
-/* line 7, ../scss/assessment.scss */
-#modalAssessment {
-  z-index: 10001;
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    background-color: #fff;
+    border: 1px solid #fff;
 }
-/* line 11, ../scss/assessment.scss */
-#modalAssessment .modal-dialog {
-  width: 90%;
+
+html,
+body {
+    height: 100%;
+    background-color: #f7f7f7;
 }
-/* line 15, ../scss/assessment.scss */
-#modalAssessment .intro {
-  text-align: left;
-  font-size: 0.9em;
+
+body {
+    color: #333;
+    text-align: center;
+    font-size: 14px;
 }
-/* line 20, ../scss/assessment.scss */
-#modalAssessment .progress {
-  margin-top: 10px;
+
+section {
+    min-height: 450px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
-/* line 24, ../scss/assessment.scss */
-#modalAssessment .actions {
-  margin-top: 3em;
-  margin-bottom: 3em;
+/* line 44, ../scss/splash.scss */
+section#carousel {
+    background-color: #efefef;
+    padding: 0px;
 }
-/* line 27, ../scss/assessment.scss */
-#modalAssessment .actions button {
-  font-size: 0.9em;
-  width: 100%;
-  min-height: 10em;
-  margin-right: 20px;
-  white-space: normal;
+
+.half {
+    width: 50%;
+    margin: auto;
 }
-/* line 33, ../scss/assessment.scss */
-#modalAssessment .actions button i {
-  display: block;
-  font-size: 4em;
+
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /* For at least Firefox */
+    background: url("/images/woman-sunset.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
-/* line 39, ../scss/assessment.scss */
-#modalAssessment .actions .captions {
-  margin-top: 1em;
-  font-weight: 200;
-  font-size: 1em;
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
 }
-/* line 44, ../scss/assessment.scss */
-#modalAssessment .actions .captions :first-child {
-  text-align: left;
-  float: left;
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10em;
 }
-/* line 48, ../scss/assessment.scss */
-#modalAssessment .actions .captions :nth-child(2) {
-  text-align: right;
-  float: right;
+
+.inner {
+    padding: 20px;
 }
-/* line 55, ../scss/assessment.scss */
-#modalAssessment .step {
-  margin-top: 1em;
+
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-/* line 58, ../scss/assessment.scss */
-#modalAssessment .step p {
-  font-size: 2em;
+
+.masthead-brand img {
+    width: 250px;
 }
-/* line 62, ../scss/assessment.scss */
-#modalAssessment .step p.muted {
-  font-size: 1.5em;
-  color: #5a5a5a;
+
+.masthead-nav {
+    padding-top: 30px;
 }
-/* line 68, ../scss/assessment.scss */
-#modalAssessment .step ul li {
-  list-style-type: none;
-  font-size: 1.5em;
+
+.masthead-nav > li {
+    display: inline-block;
+    color: #5096D2;
+    border-bottom-color: #a3a3a3;
 }
-/* line 76, ../scss/assessment.scss */
-#modalAssessment .form-control.error {
-  border-color: #ff5e5e;
+
+.masthead-nav > li.active {
+    border-bottom: 2px solid #d3d3d3;
+}
+
+.masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5096D2;
+    border-bottom: 2px solid transparent;
+}
+
+.masthead-nav > li > a:hover, .masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: #f0f0f0;
+}
+
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .masthead-brand {
+        float: left;
+    }
+
+    .masthead-nav {
+        float: right;
+    }
+}
+
+.cover {
+    padding: 0 20px;
+}
+
+.cover.btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.site-wrapper-inner {
+    vertical-align: middle;
+}
+
+
+#subnav {
+    color: blue;
+    background-color: #BFA060;
+    -moz-box-shadow: #1b1b1b 1px 1px 1px;
+    -webkit-box-shadow: #1b1b1b 1px 1px 1px;
+    box-shadow: #1b1b1b 1px 1px 1px;
+    z-index: 10000;
+    top: -50px;
+    width: 100%;
+}
+
+#subnav .active {
+    border-bottom: 1px solid #efefef;
+}
+
+#subnav img {
+    width: 150px;
+}
+#subnav.affix-top {
+    border-bottom: 1px solid #1b1b1b;
+}
+
+#subnav.affix {
+    display: block;
+    position: fixed;
+    top: 0;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.masthead {
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .masthead {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .cover-container {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .cover-container {
+        width: 785px;
+    }
 }

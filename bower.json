@@ -1,0 +1,25 @@
+{
+  "name": "lifelinks",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Erick Caballero"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "lifelinks"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular-bootstrap": "~1.1.2"
+  }
+}
