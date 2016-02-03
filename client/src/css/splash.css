@@ -1,0 +1,246 @@
+/*
+ * Globals
+ */
+/* Links */
+/* line 8, ../scss/splash.scss */
+
+.half {
+  width:50%;
+  margin: auto;
+}
+a,
+a:focus,
+a:hover {
+  color: #5096D2;
+}
+
+/* Custom default button */
+/* line 15, ../scss/splash.scss */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+body {
+  height: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* line 39, ../scss/splash.scss */
+section {
+  min-height: 450px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+/* line 44, ../scss/splash.scss */
+section#carousel {
+  background-color: #efefef;
+  padding: 0px;
+}
+/* line 48, ../scss/splash.scss */
+section#how {
+  background-color: #E7EBFF;
+  border-bottom: solid 1px #d3d3d3;
+}
+/* line 52, ../scss/splash.scss */
+section#about {
+  background-color: #fefefe;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+/* line 58, ../scss/splash.scss */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  background: url("/images/woman-sunset.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* line 71, ../scss/splash.scss */
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* line 75, ../scss/splash.scss */
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10em;
+}
+
+/* Padding for spacing */
+/* line 82, ../scss/splash.scss */
+.inner {
+  padding: 20px;
+}
+
+/*
+ * Header
+ */
+/* line 90, ../scss/splash.scss */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 94, ../scss/splash.scss */
+.masthead-brand img {
+  width: 250px;
+}
+
+/* line 99, ../scss/splash.scss */
+.masthead-nav {
+  padding-top: 30px;
+  margin-right: 150px;
+}
+/* line 102, ../scss/splash.scss */
+.masthead-nav > li {
+  display: inline-block;
+  color: #5096D2;
+  border-bottom-color: #a3a3a3;
+}
+/* line 107, ../scss/splash.scss */
+.masthead-nav > li.active {
+  border-bottom: 2px solid #d3d3d3;
+}
+/* line 111, ../scss/splash.scss */
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5096D2;
+  border-bottom: 2px solid transparent;
+}
+/* line 119, ../scss/splash.scss */
+.masthead-nav > li > a:hover, .masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #f0f0f0;
+}
+/* line 126, ../scss/splash.scss */
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 134, ../scss/splash.scss */
+  .masthead-brand {
+    float: left;
+  }
+
+  /* line 137, ../scss/splash.scss */
+  .masthead-nav {
+    float: right;
+  }
+}
+/*
+ * Cover
+ */
+/* line 146, ../scss/splash.scss */
+.cover {
+  padding: 0 20px;
+}
+/* line 149, ../scss/splash.scss */
+.cover.btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/* line 155, ../scss/splash.scss */
+.circle-button {
+  border: 0;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  font-size: 0.8em;
+  line-height: 1.1em;
+  color: #ffffff;
+  background-color: #5096D2;
+  margin: auto;
+  border-radius: 50%;
+  height: 7em;
+  width: 7em;
+  position: relative;
+}
+
+/*
+ * Affix and center
+ */
+/* line 185, ../scss/splash.scss */
+.site-wrapper-inner {
+  vertical-align: middle;
+}
+
+/* line 189, ../scss/splash.scss */
+#subnav {
+  color: blue;
+  background-color: #BFA060;
+  -moz-box-shadow: #1b1b1b 1px 1px 1px;
+  -webkit-box-shadow: #1b1b1b 1px 1px 1px;
+  box-shadow: #1b1b1b 1px 1px 1px;
+  z-index: 10000;
+  top: -50px;
+  width: 100%;
+}
+/* line 197, ../scss/splash.scss */
+#subnav .active {
+  border-bottom: 1px solid #efefef;
+}
+/* line 201, ../scss/splash.scss */
+#subnav img {
+  width: 150px;
+}
+/* line 205, ../scss/splash.scss */
+#subnav.affix-top {
+  border-bottom: 1px solid #1b1b1b;
+}
+/* line 209, ../scss/splash.scss */
+#subnav.affix {
+  display: block;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/* line 218, ../scss/splash.scss */
+.masthead {
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 226, ../scss/splash.scss */
+  .masthead {
+    padding: 0px 20px 0px 20px;
+  }
+
+  /* Handle the widths */
+  /* line 231, ../scss/splash.scss */
+  .cover-container {
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+@media (min-width: 992px) {
+  /* line 237, ../scss/splash.scss */
+  .cover-container {
+    width: 785px;
+  }
+}

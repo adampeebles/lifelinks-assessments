@@ -1,13 +1,35 @@
-<body id='home'>
-<div class="masthead clearfix">
+
+<div class="masthead clearfix" data-ng-controller="ArticleHeaderCtrl as vm">
     <div class="inner">
         <h3 class="masthead-brand"><img src='/images/lifelinks.png' /></h3>
         <nav class='nav-main'>
-            <ul class="nav masthead-nav">
-                <li class="active"><a href="/#/">Home</a></li>
 
-            </ul>
+             <ul class="nav masthead-nav">
+
+                 <li uib-dropdown ng-show="vm.articlesData.articles.length>0">
+                     <a uib-dropdown-toggle>Articles<span class="caret"></span></a>
+                     <ul uib-dropdown-menu>
+                         <li> Recommended for you!</li>
+                         <li role="separator" class="divider"></li>
+
+                         <li ng-repeat="article in vm.articlesData.articles" >
+                             <a ng-href="/#/articles/{{ article.url }} "> {{ article.title }} </a>
+                         </li>
+
+                         <li role="separator" class="divider"></li>
+
+                         <li><a href="#/articles/creating-a-plan">Creating a Plan</a></li>
+                         <li><a href="#/articles/two-places-at-once">Being in Two Places at Once</a></li>
+                         <li><a href="#/articles/interpreter">Interpreter</a></li>
+                         <li><a href="#/articles/family-dynamics">Family Dynamics</a></li>
+                         <li><a href="#/articles/sister">The Sister You Wish You Had</a></li>
+                         <li><a href="#/articles/long-distance">Long Distance Caregiving</a></li>
+                     </ul>
+                 </li>
+
+             </ul>
         </nav>
+
     </div>
 </div>
 

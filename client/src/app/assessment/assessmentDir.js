@@ -27,14 +27,15 @@
                     }else{
                        /* if(!$('input[name=answer]:checked').length) return false;
                         scope.actualAnswer = $('input[name=answer]:checked').val();*/
+                        console.log(scope.actualAnswer);
                         if(scope.actualAnswer !== -1)
                             return true;
                     }
                 }
                 function saveAnswer(saveSuccessfully) {
                     var finalAnswer  =  scope.actualAnswer;
-                    if(scope.questionNumber === 7) {
-                        finalAnswer--;
+                    if(scope.questionNumber < 7) {
+                        finalAnswer++;
                     }
                     $http.post('/api/assessment/question/' + scope.questionNumber, { answer: finalAnswer }).then(saveSuccessfully,errorSavingQuestion);
                 };
@@ -54,8 +55,8 @@
                         scope.question = actualQuestion.question;
                         scope.options = actualQuestion.options;
                     } else {
-                        scope.$parent.assessmentOver= scope.assessmentOver  = true;
-                        scope.$parent.requestArticles();
+                        scope.$parent.vm.assessmentOver= scope.assessmentOver  = true;
+                        scope.$parent.vm.requestArticles();
                     }
                 };
                 function getNextQuestion() {
