@@ -24,7 +24,7 @@
                              v = value === temp;
                          ctrl.$setValidity(directiveName, v);
                          return value;
-                     }
+                     };
 
                      ctrl.$parsers.unshift(validator);
                      ctrl.$formatters.push(validator);

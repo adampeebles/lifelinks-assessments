@@ -2,20 +2,6 @@
         <h3 id="question"> {{ question }} </h3>
         <div ng-show="!lastQuestion">
 
-
-        <!-- <ul id="options" class="list-inline">
-
-                <li ng-repeat="option in options">
-
-                    <label>
-                    <input type="radio" class="btn btn-info" name="answer" ng-value="{{ $index }} + 1" >
-                                 {{ option }}</label>
-
-
-                </li>
-
-            </ul>
-        -->
             <div class="form-group">
             <select name="repeatSelect" id="repeatSelect" ng-model="actualAnswer" class="form-control">
                 <option ng-repeat="option in options" value="{{ $index }}">{{option}}</option>
@@ -35,9 +21,6 @@
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="nextQuestion()">Next</button>
-
-
-
     </div>
 
 

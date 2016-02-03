@@ -14,7 +14,6 @@
 
         function requestArticles() {
             articlesService.requestArticles().then(function (response) {
-                console.log(response.data.articles);
                 vm.articles = response.data.articles;
                 articlesService.articlesData.articles = vm.articles;
             });

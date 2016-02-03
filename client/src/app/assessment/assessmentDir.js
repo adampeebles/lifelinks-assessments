@@ -25,10 +25,7 @@
                         scope.actualAnswer = scope.location;
                         return true;
                     }else{
-                       /* if(!$('input[name=answer]:checked').length) return false;
-                        scope.actualAnswer = $('input[name=answer]:checked').val();*/
-                        console.log(scope.actualAnswer);
-                        if(scope.actualAnswer !== -1)
+                       if(scope.actualAnswer !== -1)
                             return true;
                     }
                 }
@@ -38,7 +35,7 @@
                         finalAnswer++;
                     }
                     $http.post('/api/assessment/question/' + scope.questionNumber, { answer: finalAnswer }).then(saveSuccessfully,errorSavingQuestion);
-                };
+                }
                 function startAssessment() {
                     scope.id = 0;
                     scope.actualAnswer = -1;
@@ -47,7 +44,7 @@
                     scope.errorMessage = 'Please select an option or fill fields required!';
                     scope.location = { city:'', state: ''};
                     scope.getQuestion();
-                };
+                }
                 function getQuestion() {
                     var actualQuestion = questionsFactory.getQuestion(scope.id);
                     if(scope.id === 7) scope.lastQuestion = true;
@@ -58,7 +55,7 @@
                         scope.$parent.vm.assessmentOver= scope.assessmentOver  = true;
                         scope.$parent.vm.requestArticles();
                     }
-                };
+                }
                 function getNextQuestion() {
 
                     scope.isAnswered = checkItsAnswered();
@@ -80,7 +77,7 @@
                     });
                 }
                 function errorSavingQuestion() {
-                    alert('An unexpected error happened while saving the answer');
+                    console.log('An unexpected error happened while saving the answer');
                 }
                 startAssessment();
             }

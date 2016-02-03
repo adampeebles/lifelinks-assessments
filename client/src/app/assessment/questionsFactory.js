@@ -2,7 +2,7 @@
  * Created by erick304 on 28/01/2016.
  */
 (function() {
-    'use strict'
+    'use strict';
 
     angular.module('assessmentsApp')
         .factory('questionsFactory', questionsFactory);

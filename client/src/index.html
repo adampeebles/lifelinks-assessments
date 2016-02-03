@@ -14,48 +14,32 @@
 
 	<link href="http://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css">
 
-
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/splash.css" />
     <link rel="stylesheet" href="css/items.css" />
-
 
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-route/angular-route.js"></script>
 
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-
-
-
-
 </head>
 <body>
-
-
-
-
     <header id="header" ng-include="'app/layouts/homeHeader.html'" ></header>
-
-
     <div class="container" ng-view=""></div>
-
     <footer id="footer" ng-include="'app/layouts/footer.html'" ></footer>
-
 
     <script src="app/app.js"></script>
     <script src="app/auth/authService.js"></script>
     <script src="app/user/userCtrl.js"></script>
 
-
     <script src="app/assessment/assessmentCtrl.js"></script>
-     <script src="app/layouts/articleHeaderCtrl.js"></script>
+    <script src="app/layouts/articleHeaderCtrl.js"></script>
 
-     <script src="app/common/articlesService.js"></script>
+    <script src="app/common/articlesService.js"></script>
     <script src="app/assessment/questionsFactory.js"></script>
 
     <script src="app/user/match.js"></script>
     <script src="app/assessment/assessmentDir.js"></script>
-
 
 </body>
 </html>

@@ -24,7 +24,7 @@ angular.module('assessmentsApp', ['ngRoute', 'ui.bootstrap'])
 				.when('/articles/sister',{templateUrl: 'app/views/articles/sister.html'})
 				.when('/articles/two-places-at-once',{templateUrl: 'app/views/articles/two-places-at-once.html'})
 				.otherwise({redirectTo: '/'});
-	};
+	}
 
 function runApp($rootScope, $location, authService) {
 	$rootScope.$on('$routeChangeStart', function (event) {

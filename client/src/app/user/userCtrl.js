@@ -3,7 +3,7 @@
  */
 
 (function() {
-    'use strict'
+    'use strict';
     angular.module('assessmentsApp')
         .controller('UserCtrl', ['$http', '$location', 'authService', UserCtrl])
 
