@@ -10,7 +10,14 @@ const  request = require('request');
 const  config = require('./lib/databaseConfiguration')();
 const  fs = require('fs');
 
-server.connection({ port: 3000 });
+server.connection({
+    port: ~~process.env.PORT || 8000,
+    routes: { cors: {
+                    credentials: true,
+                    origin: ["*"]
+                }
+              }
+});
 
 server.ext('onRequest', function(request, reply) {
 	console.log('Request received: ' + request.path);
