@@ -7,7 +7,7 @@ const server = new Hapi.Server();
 const Boom = require('boom');
 const  _ = require("lodash");
 const  request = require('request');
-const  config = require('./lib/databaseConfiguration.js')();
+const  config = require('./lib/databaseconfiguration')();
 const  fs = require('fs');
 
 server.connection({
