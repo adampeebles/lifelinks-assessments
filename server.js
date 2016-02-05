@@ -7,16 +7,11 @@ const server = new Hapi.Server();
 const Boom = require('boom');
 const  _ = require("lodash");
 const  request = require('request');
-const  config = require('./lib/databaseConfiguration')();
+const  config = require('./lib/databaseConfiguration.js')();
 const  fs = require('fs');
 
 server.connection({
-    port: ~~process.env.PORT || 8000,
-    routes: { cors: {
-                    credentials: true,
-                    origin: ["*"]
-                }
-              }
+    port: ~~process.env.PORT || 8000
 });
 
 server.ext('onRequest', function(request, reply) {
